@@ -4,30 +4,92 @@
              xmlns:local="clr-namespace:RockPaperScissorsMobile"
              x:Class="RockPaperScissorsMobile.MainPage">
 
-    <Grid>
+    <Grid
+	    >
 		<Grid.RowDefinitions>
+			<RowDefinition Height="50"/>
 			<RowDefinition Height="50" />
 			<RowDefinition Height="*" />
+			<RowDefinition Height="200" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="100" />
 		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
+	    <Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*" />
 			<ColumnDefinition Width="*" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
-		<Label Text="Rock, Paper, Scissors"
-			   Grid.Row="0" Grid.Column="0"
-			   Grid.ColumnSpan="2"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand"/>
-		<Button Text="ABV"
-			   Grid.Row="1" Grid.Column="0"
-				/>
-		<Button Text="ABV"
-			   Grid.Row="1" Grid.Column="1"
-				/>
-		<Button Text="ABV"
-			   Grid.Row="1" Grid.Column="2"
-				/>
+
+		<!--ROW 0-->
+	    <Label Text="Rock Paper Scissors"
+	           Grid.Column="0"
+	           Grid.ColumnSpan="3"
+	           Grid.Row="0"
+	           HorizontalOptions="Center"
+	           VerticalOptions="CenterAndExpand"
+	           FontSize="30"
+	           FontAttributes="Bold"/>
+	    <Image
+		    x:Name="PlayerAvatar"
+		    HorizontalOptions="Center"
+		    Grid.Row="1"
+		    Grid.Column="0"
+		    Aspect="Fill"
+		    WidthRequest="50"/>
+		<Image
+			x:Name="ComputerAvatar"
+			HorizontalOptions="Center"
+			Grid.Row="1"
+			Grid.Column="2"
+			Aspect="Fill"
+			WidthRequest="50"/>
+		<Label 
+			Text="0"
+			x:Name="PlayerScore"
+			HorizontalOptions="Center"
+			FontSize="Large"
+			Grid.Row="2"
+			Grid.Column="0"/>
+	    <Label 
+		    Text="0"
+		    x:Name="ComputerScore"
+		    HorizontalOptions="Center"
+			FontSize="Large"
+		    Grid.Row="2"
+		    Grid.Column="2"/>
+		<Image
+			x:Name="PlayerPick"
+			Grid.Row="3" Grid.Column="0"></Image>
+		<Label Text="VS"
+		       Grid.Row="3" Grid.Column="1"
+		       HorizontalOptions="Center"
+			   VerticalOptions="Center"
+		       FontSize="Large"
+		       FontAttributes="Bold"/>
+	    <Image
+			x:Name="ComputerPick"
+		    Grid.Row="3" Grid.Column="2"></Image>
+
+		<Button Text="Rock"
+				x:Name="RockButton"
+			    Grid.Row="5" Grid.Column="0"
+				Clicked="RockButton_OnClicked"
+				BackgroundColor="#7FDBFF"/>
+		<Button Text="Paper"
+				x:Name="PaperButton"
+				Clicked="PaperButton_OnClicked"
+			    Grid.Row="5" Grid.Column="1"
+				BackgroundColor="#7FDBFF"/>
+		<Button Text="Scissors"
+				x:Name="ScissorsButton"
+				Clicked="ScissorsButton_OnClicked"
+			    Grid.Row="5" Grid.Column="2"
+				BackgroundColor="#7FDBFF"/>
 	</Grid>
+	<!--<StackLayout>
+	<Label Text="Rock, Paper, Scissors"
+	       HorizontalOptions="Center"
+	       VerticalOptions="CenterAndExpand"/>
+	</StackLayout>-->
 
 </ContentPage>

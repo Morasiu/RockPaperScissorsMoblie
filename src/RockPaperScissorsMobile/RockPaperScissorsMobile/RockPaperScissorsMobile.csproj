@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,6 +10,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\background.png" />
+    <None Remove="Images\computer.png" />
+    <None Remove="Images\paper.png" />
+    <None Remove="Images\rock.png" />
+    <None Remove="Images\scissors.png" />
+    <None Remove="Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\background.png" />
+    <EmbeddedResource Include="Images\computer.png" />
+    <EmbeddedResource Include="Images\paper.png" />
+    <EmbeddedResource Include="Images\rock.png" />
+    <EmbeddedResource Include="Images\scissors.png" />
+    <EmbeddedResource Include="Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.540366" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RPSClassLib\RPSClassLib.csproj" />
   </ItemGroup>
 </Project>

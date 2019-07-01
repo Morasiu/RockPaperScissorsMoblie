@@ -12,7 +12,7 @@
 			<RowDefinition Height="*" />
 			<RowDefinition Height="200" />
 			<RowDefinition Height="*" />
-			<RowDefinition Height="100" />
+			<RowDefinition Height="80" />
 		</Grid.RowDefinitions>
 	    <Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*" />
@@ -70,26 +70,18 @@
 			x:Name="ComputerPick"
 		    Grid.Row="3" Grid.Column="2"></Image>
 
-		<Button Text="Rock"
-				x:Name="RockButton"
+		<ImageButton x:Name="RockButton"
 			    Grid.Row="5" Grid.Column="0"
 				Clicked="RockButton_OnClicked"
 				BackgroundColor="#7FDBFF"/>
-		<Button Text="Paper"
-				x:Name="PaperButton"
+		<ImageButton x:Name="PaperButton"
 				Clicked="PaperButton_OnClicked"
 			    Grid.Row="5" Grid.Column="1"
 				BackgroundColor="#7FDBFF"/>
-		<Button Text="Scissors"
-				x:Name="ScissorsButton"
+		<ImageButton x:Name="ScissorsButton"
 				Clicked="ScissorsButton_OnClicked"
 			    Grid.Row="5" Grid.Column="2"
 				BackgroundColor="#7FDBFF"/>
 	</Grid>
-	<!--<StackLayout>
-	<Label Text="Rock, Paper, Scissors"
-	       HorizontalOptions="Center"
-	       VerticalOptions="CenterAndExpand"/>
-	</StackLayout>-->
 
 </ContentPage>

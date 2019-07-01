@@ -32,9 +32,9 @@ namespace RockPaperScissorsMobile {
 		}
 
 		private void SetButtonImages() {
-			RockButton.ImageSource = _pickImages[Pick.Rock];
-			ScissorsButton.ImageSource = _pickImages[Pick.Scissor];
-			PaperButton.ImageSource = _pickImages[Pick.Paper];
+			RockButton.Source = _pickImages[Pick.Rock];
+			ScissorsButton.Source = _pickImages[Pick.Scissor];
+			PaperButton.Source = _pickImages[Pick.Paper];
 		}
 
 		private void ScissorsButton_OnClicked(object sender, EventArgs e) {

@@ -10,20 +10,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\award.png" />
     <None Remove="Images\background.png" />
     <None Remove="Images\computer.png" />
+    <None Remove="Images\equal.png" />
     <None Remove="Images\paper.png" />
+    <None Remove="Images\question.png" />
     <None Remove="Images\rock.png" />
     <None Remove="Images\scissors.png" />
+    <None Remove="Images\settings.png" />
+    <None Remove="Images\shocked.png" />
     <None Remove="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\award.png" />
     <EmbeddedResource Include="Images\background.png" />
     <EmbeddedResource Include="Images\computer.png" />
+    <EmbeddedResource Include="Images\equal.png" />
     <EmbeddedResource Include="Images\paper.png" />
+    <EmbeddedResource Include="Images\question.png" />
     <EmbeddedResource Include="Images\rock.png" />
     <EmbeddedResource Include="Images\scissors.png" />
+    <EmbeddedResource Include="Images\settings.png" />
+    <EmbeddedResource Include="Images\shocked.png" />
     <EmbeddedResource Include="Images\user.png" />
   </ItemGroup>
 

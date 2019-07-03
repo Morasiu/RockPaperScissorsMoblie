@@ -5,13 +5,11 @@
              x:Class="RockPaperScissorsMobile.MainPage"
              Title="Rock, Paper, Scissors">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem x:Name="SettingsToolbarItem"  Order="Secondary" Text="Settings" Priority="0" Clicked="SettingsToolbarItem_OnClicked"/>
 		<ToolbarItem x:Name="CreditsToolbarItem"  Order="Secondary" Text="Credits" Priority="0" Clicked="CreditsToolbarItem_OnClicked"/>
 	</ContentPage.ToolbarItems>
-	<Grid
-	    >
+	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="50" />
+			<RowDefinition Height="80" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="200" />
 			<RowDefinition Height="*" />
@@ -29,15 +27,17 @@
 		    HorizontalOptions="Center"
 		    Grid.Row="0"
 		    Grid.Column="0"
-		    Aspect="Fill"
-		    WidthRequest="50"/>
+		    Aspect="AspectFill"
+			WidthRequest="60"
+			Margin="10"/>
 		<Image
 			x:Name="ComputerAvatar"
 			HorizontalOptions="Center"
 			Grid.Row="0"
 			Grid.Column="2"
-			Aspect="Fill"
-			WidthRequest="50"/>
+			Aspect="AspectFill"
+			WidthRequest="60"
+			Margin="10"/>
 		<!-- ROW 1 -->
 		<Label 
 			Text="0"

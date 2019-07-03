@@ -139,10 +139,6 @@ namespace RockPaperScissorsMobile {
 			ComputerScore.Text = _game.Score.ComputerScore.ToString();
 		}
 
-		private async void SettingsToolbarItem_OnClicked(object sender, EventArgs e) {
-			await Navigation.PushAsync(new SettingsPage());
-		}
-
 		private async void CreditsToolbarItem_OnClicked(object sender, EventArgs e) {
 			await Navigation.PushAsync(new CreditsPage());
 		}

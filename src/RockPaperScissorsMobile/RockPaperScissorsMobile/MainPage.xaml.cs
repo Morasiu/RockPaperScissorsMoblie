@@ -13,9 +13,6 @@ namespace RockPaperScissorsMobile {
 		public MainPage() {
 			GetPicksImages();
 			InitializeComponent();
-
-			SettingButton.Source = ImageSource.FromResource("RockPaperScissorsMobile.Images.settings.png",
-				Assembly.GetExecutingAssembly());
 			SetDefaultPicksImages();
 			SetAvatarsImages();
 			SetButtonImages();
@@ -38,10 +35,8 @@ namespace RockPaperScissorsMobile {
 		}
 
 		private void SetDefaultPicksImages() {
-			var questionMarkImage = QuestionMarkImage;
-
-			PlayerPick.Source = questionMarkImage;
-			ComputerPick.Source = questionMarkImage;
+			PlayerPick.Source = QuestionMarkImage;
+			ComputerPick.Source = QuestionMarkImage;
 		}
 
 		private static ImageSource QuestionMarkImage =>
@@ -116,8 +111,7 @@ namespace RockPaperScissorsMobile {
 			ChangePickButtonStatus(true);
 			GameStatus.IsVisible = false;
 			GameStatus.IsEnabled = false;
-			PlayerPick.Source = QuestionMarkImage;
-			ComputerPick.Source = QuestionMarkImage;
+			SetDefaultPicksImages();
 			UpdateScore();
 		}
 
@@ -143,6 +137,14 @@ namespace RockPaperScissorsMobile {
 		private void UpdateScore() {
 			PlayerScore.Text = _game.Score.HumanScore.ToString();
 			ComputerScore.Text = _game.Score.ComputerScore.ToString();
+		}
+
+		private async void SettingsToolbarItem_OnClicked(object sender, EventArgs e) {
+			await Navigation.PushAsync(new SettingsPage());
+		}
+
+		private async void CreditsToolbarItem_OnClicked(object sender, EventArgs e) {
+			await Navigation.PushAsync(new CreditsPage());
 		}
 	}
 }

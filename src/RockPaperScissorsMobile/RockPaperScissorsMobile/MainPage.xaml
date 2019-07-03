@@ -2,12 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:RockPaperScissorsMobile"
-             x:Class="RockPaperScissorsMobile.MainPage">
-
-    <Grid
+             x:Class="RockPaperScissorsMobile.MainPage"
+             Title="Rock, Paper, Scissors">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="SettingsToolbarItem"  Order="Secondary" Text="Settings" Priority="0" Clicked="SettingsToolbarItem_OnClicked"/>
+		<ToolbarItem x:Name="CreditsToolbarItem"  Order="Secondary" Text="Credits" Priority="0" Clicked="CreditsToolbarItem_OnClicked"/>
+	</ContentPage.ToolbarItems>
+	<Grid
 	    >
 		<Grid.RowDefinitions>
-			<RowDefinition Height="50"/>
 			<RowDefinition Height="50" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="200" />
@@ -21,81 +24,65 @@
 		</Grid.ColumnDefinitions>
 
 		<!--ROW 0-->
-	    <Label Text="Rock Paper Scissors"
-	           Grid.Column="0"
-	           Grid.ColumnSpan="2"
-	           Grid.Row="0"
-	           HorizontalOptions="Center"
-	           VerticalOptions="CenterAndExpand"
-	           FontSize="25"
-	           FontAttributes="Bold"/>
-		<ImageButton x:Name="SettingButton"
-		        Grid.Column="2"
-		        Grid.Row="0"
-		        WidthRequest="40"
-		        HeightRequest="40"
-				HorizontalOptions="Center"
-		        Aspect="AspectFit"
-		        BackgroundColor="Transparent"/>
-		<!--ROW 1-->
 		<Image
 		    x:Name="PlayerAvatar"
 		    HorizontalOptions="Center"
-		    Grid.Row="1"
+		    Grid.Row="0"
 		    Grid.Column="0"
 		    Aspect="Fill"
 		    WidthRequest="50"/>
 		<Image
 			x:Name="ComputerAvatar"
 			HorizontalOptions="Center"
-			Grid.Row="1"
+			Grid.Row="0"
 			Grid.Column="2"
 			Aspect="Fill"
 			WidthRequest="50"/>
+		<!-- ROW 1 -->
 		<Label 
 			Text="0"
 			x:Name="PlayerScore"
 			HorizontalOptions="Center"
 			FontSize="Large"
-			Grid.Row="2"
+			Grid.Row="1"
 			Grid.Column="0"/>
 	    <Label 
 		    Text="0"
 		    x:Name="ComputerScore"
 		    HorizontalOptions="Center"
 			FontSize="Large"
-		    Grid.Row="2"
+		    Grid.Row="1"
 		    Grid.Column="2"/>
 		<Image
 			x:Name="PlayerPick"
-			Grid.Row="3" Grid.Column="0"></Image>
+			Grid.Row="2" Grid.Column="0"></Image>
 		<Label Text="VS"
-		       Grid.Row="3" Grid.Column="1"
+		       Grid.Row="2" Grid.Column="1"
 		       HorizontalOptions="Center"
 			   VerticalOptions="Center"
 		       FontSize="Large"
 		       FontAttributes="Bold"/>
 	    <Image
 			x:Name="ComputerPick"
-		    Grid.Row="3" Grid.Column="2"></Image>
+		    Grid.Row="2" Grid.Column="2"></Image>
 		<Button x:Name="GameStatus"
 				IsVisible="False"
 				IsEnabled="False"
-				Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+				Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
 				BackgroundColor="White"
 				WidthRequest="100"
 				HeightRequest="100"/>
 		<ImageButton x:Name="RockButton"
-			    Grid.Row="5" Grid.Column="0"
+			    Grid.Row="4" Grid.Column="0"
 				Clicked="RockButton_OnClicked"
 				BackgroundColor="#7FDBFF"/>
 		<ImageButton x:Name="PaperButton"
 				Clicked="PaperButton_OnClicked"
-			    Grid.Row="5" Grid.Column="1"
+			    Grid.Row="4" Grid.Column="1"
 				BackgroundColor="#7FDBFF"/>
 		<ImageButton x:Name="ScissorsButton"
 				Clicked="ScissorsButton_OnClicked"
-			    Grid.Row="5" Grid.Column="2"
+			    Grid.Row="4" Grid.Column="2"
 				BackgroundColor="#7FDBFF"/>
 	</Grid>
 
